@@ -9,7 +9,7 @@ Theme: Likely defined by GDFG Monthly Jam #22 as I have liked submitting for tho
 ### Needs
 
 - [x] First-person perspective
-- [ ] 1 raycast gun
+- [x] 1 raycast gun
 - [ ] 3 boss enemies that drop loot
 - [ ] loot can be used to upgrade the gun
 - [ ] basic arenas to do combat in
@@ -53,3 +53,13 @@ Welp...some stuff happened and I need to stay up pretty much all night. Going to
 Miziziziz is amazing - https://www.youtube.com/watch?v=LbyyjmOji0M&t - will be combining this with Garbaj's FPS controller
 
 Ha, after watching the Miziziziz video, I will be starting with their controller instead of Garbaj's. Nothing wrong with Garbaj's controller, but the limitation on jumping and camera movement are going to make it easier to design the rest of the game in a month.
+
+Good news, I did NOT have to stay up all night, so I only spent a couple hours working on things.
+
+Dev Time: 3 hours
+
+## 2022.10.23
+
+I'm starting out today with a baseline from Miziziziz and am going to start tweaking. I think I want to add a simple gunshot sound to start getting a feel for the impact. I may also look at freeing up/down camera movement; I'd pull some of that logic from Garbaj's controller. Regardless, I think the next thing I should look at setting up is a testing arena to mess around with.
+
+Dev Time: 2 hours (so far)

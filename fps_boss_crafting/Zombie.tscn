@@ -4,8 +4,9 @@
 [ext_resource path="res://Zombie.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
+radius = 0.8
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="SpatialMaterial" id=6]
 flags_transparent = true
 flags_unshaded = true
 params_billboard_mode = 2
@@ -72,7 +73,7 @@ shape = SubResource( 1 )
 enabled = true
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-material_override = SubResource( 2 )
+material_override = SubResource( 6 )
 texture = ExtResource( 1 )
 hframes = 5
 vframes = 2

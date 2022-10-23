@@ -14,9 +14,20 @@ config/name="Fps Boss Crafting"
 run/main_scene="res://Levels/Level_0.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SoundPlayer="*res://SoundPlayer.tscn"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[importer_defaults]
+
+ogg_vorbis={
+"loop": false,
+"loop_offset": 0
+}
 
 [input]
 
