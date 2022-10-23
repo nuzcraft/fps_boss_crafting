@@ -47,3 +47,9 @@ Theme: Likely defined by GDFG Monthly Jam #22 as I have liked submitting for tho
 It's kinda too early to start development...but I'm going to try to get somethign basic up and running so I can futz with classes/structures/etc.
 
 I'm going to start with the FPS controller from Garbaj that I used for Mildly Haunted.
+
+Welp...some stuff happened and I need to stay up pretty much all night. Going to see what I can learn about 2D/3D FPS shenanigans. That will get me out of complex 3d modeling for a bit.
+
+Miziziziz is amazing - https://www.youtube.com/watch?v=LbyyjmOji0M&t - will be combining this with Garbaj's FPS controller
+
+Ha, after watching the Miziziziz video, I will be starting with their controller instead of Garbaj's. Nothing wrong with Garbaj's controller, but the limitation on jumping and camera movement are going to make it easier to design the rest of the game in a month.
