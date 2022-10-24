@@ -12,9 +12,17 @@ Theme: Likely defined by GDFG Monthly Jam #22 as I have liked submitting for tho
 - [x] 1 raycast gun
 - [ ] 3 boss enemies that drop loot
 - [ ] loot can be used to upgrade the gun
-- [ ] basic arenas to do combat in
-- [ ] sounds
-- [ ] basic game juice
+- [x] basic arena to do combat in
+- [x] sounds
+- [ ] screenshake
+
+- [ ] new player sprites
+- [ ] new enemy sprites
+- [ ] new arena textures
+- [ ] interesting arena elements (like torches/traps)
+- [ ] more sounds
+- [ ] music
+- [ ] vignette on player camera
 
 ### Wants - Tier 1
 
