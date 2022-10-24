@@ -75,7 +75,8 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 
 [node name="GunSprite" type="Sprite" parent="CanvasLayer/Control"]
-position = Vector2( 299, -256 )
+position = Vector2( 299, -192 )
+scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 3 )
 hframes = 4
 

@@ -62,4 +62,14 @@ Dev Time: 3 hours
 
 I'm starting out today with a baseline from Miziziziz and am going to start tweaking. I think I want to add a simple gunshot sound to start getting a feel for the impact. I may also look at freeing up/down camera movement; I'd pull some of that logic from Garbaj's controller. Regardless, I think the next thing I should look at setting up is a testing arena to mess around with.
 
-Dev Time: 2 hours (so far)
+I found a link to some firearm sounds here: https://opengameart.org/content/the-free-firearm-sound-library. It's under CC0, so I don't need to credit anyone + the source website is super dead.
+
+Miziziziz to the rescue... https://www.youtube.com/watch?v=s35HcQ5xv6A - what looks to be an semi-easy way to tile maps in support of his doom clone. Will start with this.
+
+Dev Time: 2 hours
+
+## 2020.10.24
+
+I spent maybe 20 mins putting together the bulk of Miziziziz's grid-map system and it's just a really simple way to set up a gridmap in Godot. I'm looking forward to doing some additional customization, potentionally using a scene from Godots own gridmap demo as a base for some (maybe) custom textures. https://docs.godotengine.org/en/stable/_downloads/517017c514e6f170e33c06253ef7b39f/gridmap_demo.zip
+
+Dev Time: 20 mins (so far)
