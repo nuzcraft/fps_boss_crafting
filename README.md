@@ -72,4 +72,6 @@ Dev Time: 2 hours
 
 I spent maybe 20 mins putting together the bulk of Miziziziz's grid-map system and it's just a really simple way to set up a gridmap in Godot. I'm looking forward to doing some additional customization, potentionally using a scene from Godots own gridmap demo as a base for some (maybe) custom textures. https://docs.godotengine.org/en/stable/_downloads/517017c514e6f170e33c06253ef7b39f/gridmap_demo.zip
 
-Dev Time: 20 mins (so far)
+Scratch that idea from the godot demo - it just includes parts of a mini-golf course, not a standard set of walls/floors. But, it does kinda layout how to create the mesh libraries from other 3d object files. I _may_ try to use blender to create some basic dungeon/arena shapes in the future. Going to just start with cubes and see how it goes.
+
+Dev Time: 30 mins (so far)
