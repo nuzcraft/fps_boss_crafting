@@ -6,6 +6,8 @@ const MOUSE_SENS = 0.5
 onready var animationPlayer := $AnimationPlayer
 onready var rayCast := $RayCast
 onready var audioPlayers := $AudioPlayers
+
+var inventory = []
  
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
