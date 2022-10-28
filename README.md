@@ -10,7 +10,8 @@ Theme: Likely defined by GDFG Monthly Jam #22 as I have liked submitting for tho
 
 - [x] First-person perspective
 - [x] 1 raycast gun
-- [ ] 3 boss enemies that drop loot
+- [ ] 3 boss enemies that
+- [x] enemies drop loot
 - [ ] loot can be used to upgrade the gun
 - [x] basic arena to do combat in
 - [x] sounds
@@ -19,7 +20,7 @@ Theme: Likely defined by GDFG Monthly Jam #22 as I have liked submitting for tho
 - [ ] new player sprites
 - [ ] new enemy sprites
 - [ ] new arena textures
-- [ ] interesting arena elements (like torches/traps)
+- [ ] interesting arena elements (like torches/traps/pillars)
 - [ ] more sounds
 - [ ] music
 - [ ] vignette on player camera

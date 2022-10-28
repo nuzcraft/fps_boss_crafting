@@ -33,6 +33,7 @@ func kill():
 	dead = true
 	$CollisionShape.disabled = true
 	animationPlayer.play("die")
+	Events.emit_signal("spawn_loot", "zombie", global_transform.origin)
 	
 	
 func set_player(p):
