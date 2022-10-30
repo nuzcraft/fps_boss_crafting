@@ -11,7 +11,6 @@ func _ready():
 	Events.connect("spawn_loot", self, "on_spawn_loot")
 
 func on_spawn_loot(name, position):
-	print(name, position)
 	var loot_array = lootManager.get_loot(name)
 	for loot in loot_array:
 		var loot_instance = loot.instance()

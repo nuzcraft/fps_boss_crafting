@@ -10,11 +10,23 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Reference",
+"class": "Inventory",
+"language": "GDScript",
+"path": "res://Player/Inventory.gd"
+}, {
+"base": "Reference",
+"class": "Item",
+"language": "GDScript",
+"path": "res://Player/Item.gd"
+}, {
+"base": "Reference",
 "class": "LootManager",
 "language": "GDScript",
 "path": "res://Loot/LootManager.gd"
 } ]
 _global_script_class_icons={
+"Inventory": "",
+"Item": "",
 "LootManager": ""
 }
 

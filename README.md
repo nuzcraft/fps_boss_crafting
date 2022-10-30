@@ -18,10 +18,10 @@ Theme: Likely defined by GDFG Monthly Jam #22 as I have liked submitting for tho
 - [x] sounds
 - [ ] screenshake
 
-- [ ] new player sprites
-- [ ] new enemy sprites
-- [ ] new arena textures
-- [ ] interesting arena elements (like torches/traps/pillars)
+- [x] new player sprites
+- [x] new enemy sprites
+- [x] new arena textures
+- [x] interesting arena elements (like torches/traps/pillars)
 - [ ] more sounds
 - [ ] music
 - [ ] vignette on player camera
