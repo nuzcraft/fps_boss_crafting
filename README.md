@@ -12,7 +12,7 @@ Theme: Likely defined by GDFG Monthly Jam #22 as I have liked submitting for tho
 - [x] 1 raycast gun
 - [ ] 3 boss enemies
 - [x] enemies drop loot
-- [ ] player can collect loot
+- [x] player can collect loot
 - [ ] loot can be used to upgrade the gun
 - [x] basic arena to do combat in
 - [x] sounds

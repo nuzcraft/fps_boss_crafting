@@ -19,15 +19,27 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Player/Item.gd"
 }, {
+"base": "KinematicBody",
+"class": "Loot",
+"language": "GDScript",
+"path": "res://Loot/Loot.gd"
+}, {
 "base": "Reference",
 "class": "LootManager",
 "language": "GDScript",
 "path": "res://Loot/LootManager.gd"
+}, {
+"base": "KinematicBody",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Player/Player.gd"
 } ]
 _global_script_class_icons={
 "Inventory": "",
 "Item": "",
-"LootManager": ""
+"Loot": "",
+"LootManager": "",
+"Player": ""
 }
 
 [application]
@@ -110,6 +122,11 @@ restart={
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":82,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
+
+[layer_names]
+
+3d_physics/layer_1="World"
+3d_physics/layer_2="Player"
 
 [physics]
 
