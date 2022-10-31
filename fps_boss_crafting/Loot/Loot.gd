@@ -24,6 +24,12 @@ func get_item():
 	
 func set_item(paramItem: Item):
 	item = paramItem
+	set_texture(item.icon_path)
+
+func set_texture(path: String):
+	var material = $Sprite3D.get_material_override()
+	var texture = load(path)
+	material.albedo_texture = texture
 
 func _on_Area_body_entered(body):
 	if body is Player:
