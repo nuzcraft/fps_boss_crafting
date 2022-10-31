@@ -26,6 +26,8 @@ Theme: Likely defined by GDFG Monthly Jam #22 as I have liked submitting for tho
 - [ ] music
 - [ ] vignette on player camera
 
+- [x] loot abstracted and icon based on attached item
+
 ### Wants - Tier 1
 
 - [ ] 1 additional weapon w/ upgrade path
