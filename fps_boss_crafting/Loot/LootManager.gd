@@ -8,7 +8,8 @@ var monster_drops = {}
 
 var item_dict = {
 	"eye": Item.EYE,
-	"skull": Item.SKULL
+	"skull": Item.SKULL,
+	"witch_hat": Item.WITCH_HAT
 }
 
 func _init():

@@ -3,6 +3,7 @@ class_name Item
 enum {
 	SKULL,
 	EYE,
+	WITCH_HAT
 }
 
 var name: String
@@ -16,6 +17,9 @@ func _init(type: int = SKULL):
 		EYE:
 			name = "eye"
 			icon_path = "res://Textures/Item/eye.png"
+		WITCH_HAT:
+			name = "witch_hat"
+			icon_path = "res://Textures/Item/witch_hat.png"
 			
 func get_name() -> String:
 	return name
