@@ -11,9 +11,16 @@ Theme: Likely defined by GDFG Monthly Jam #22 as I have liked submitting for tho
 - [x] First-person perspective
 - [x] 1 raycast gun
 - [ ] 3 boss enemies
+  - [x] zombie
+  - [x] mummy
+  - [ ] ???
+- [ ] add unique ai to enemies
 - [x] enemies drop loot
+  - [ ] add unique loot to enemies
 - [x] player can collect loot
 - [ ] loot can be used to upgrade the gun
+  - [ ] more available guns
+  - [ ] some sort of upgrade process
 - [x] basic arena to do combat in
 - [x] sounds
 - [ ] screenshake
