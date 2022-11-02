@@ -1,4 +1,6 @@
 {
+    "enemy":{
+    },
     "zombie":{
         "skull": 0.9,
         "eye": 0.1

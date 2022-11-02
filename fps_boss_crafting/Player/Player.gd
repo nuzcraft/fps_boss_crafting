@@ -14,7 +14,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	inventory = Inventory.new()
 	yield(get_tree(), "idle_frame")
-	get_tree().call_group("zombies", "set_player", self)
+	get_tree().call_group("enemies", "set_player", self)
  
 func _input(event):
 	if event is InputEventMouseMotion:

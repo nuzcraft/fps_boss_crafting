@@ -12,10 +12,10 @@ func _init(type: int = SKULL):
 	match type:
 		SKULL:
 			name = "skull"
-			icon_path = "res://Textures/skull.png"
+			icon_path = "res://Textures/Item/skull.png"
 		EYE:
 			name = "eye"
-			icon_path = "res://Textures/eye.png"
+			icon_path = "res://Textures/Item/eye.png"
 			
 func get_name() -> String:
 	return name
