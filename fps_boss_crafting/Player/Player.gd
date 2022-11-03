@@ -41,8 +41,12 @@ func _physics_process(delta):
 	move_and_collide(move_vec * MOVE_SPEED * delta)
  
 	if Input.is_action_pressed("shoot") and !animationPlayer.is_playing():
-		animationPlayer.play("shoot")
-		SoundPlayer.play_sound(SoundPlayer.GUNSHOT)
+#		animationPlayer.play("shoot")
+#		SoundPlayer.play_sound(SoundPlayer.GUNSHOT)
+#		animationPlayer.play("machinegun shoot")
+#		SoundPlayer.play_sound(SoundPlayer.MACHINEGUN)
+		animationPlayer.play("shotgun shoot")
+		SoundPlayer.play_sound(SoundPlayer.SHOTGUN)
 		var coll = rayCast.get_collider()
 		if rayCast.is_colliding() and coll.has_method("kill"):
 			coll.kill()

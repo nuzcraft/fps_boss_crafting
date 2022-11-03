@@ -1,6 +1,8 @@
 extends Node
 
 const GUNSHOT := preload("res://Sounds/V_22P_trimmed.ogg")
+const SHOTGUN := preload("res://Sounds/N_30P_trimmed.ogg")
+const MACHINEGUN := preload("res://Sounds/C_29P_trimmed.ogg")
 
 onready var audioPlayers := $AudioPlayers
 onready var musicPlayers := $MusicPlayers
