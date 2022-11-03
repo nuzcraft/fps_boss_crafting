@@ -26,4 +26,5 @@ func get_name() -> String:
 	
 func get_icon_path() -> String:
 	return icon_path
+	
 		

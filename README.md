@@ -31,7 +31,7 @@ Theme: Likely defined by GDFG Monthly Jam #22 as I have liked submitting for tho
   - [x] standard (pistol)
   - [x] shotwand (shotgun)
   - [x] machinewand (machine gun)
-- [ ] new class/object to hold wand data for player to reference
+- [x] new class/object to hold wand data for player to reference
 - [ ] raycast spread for shotwand
 - [ ] raycast spread for machinewand
 - [ ] new crosshair for shotwand
@@ -39,7 +39,7 @@ Theme: Likely defined by GDFG Monthly Jam #22 as I have liked submitting for tho
 - [ ] way to view inventory
 - [ ] crafting window
 - [ ] recipes to upgrade wands
-- [ ] ability to switch weapons
+- [x] ability to switch weapons
 - [ ] animation / particle when weapon hits
 
 #### ENEMY UPDATES

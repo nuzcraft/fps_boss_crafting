@@ -6,15 +6,31 @@ const MOUSE_SENS = 0.5
  
 onready var animationPlayer := $AnimationPlayer
 onready var rayCast := $RayCast
-onready var audioPlayers := $AudioPlayers
+onready var wandSprite := $CanvasLayer/Control/WandSprite
 
 var inventory: Inventory
+var wand: Weapon
+var shotwand: Weapon
+var machinewand: Weapon
+
+var shootSound: int
+var shootAnimation: String
  
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	inventory = Inventory.new()
 	yield(get_tree(), "idle_frame")
 	get_tree().call_group("enemies", "set_player", self)
+	
+	wand = Weapon.new(Weapon.WAND)
+	shotwand = Weapon.new(Weapon.SHOTWAND)
+	machinewand = Weapon.new(Weapon.MACHINEWAND)
+	
+	inventory.add_item(wand)
+	inventory.add_item(shotwand)
+	inventory.add_item(machinewand)	
+	
+	equip_weapon(wand)
  
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -41,15 +57,19 @@ func _physics_process(delta):
 	move_and_collide(move_vec * MOVE_SPEED * delta)
  
 	if Input.is_action_pressed("shoot") and !animationPlayer.is_playing():
-#		animationPlayer.play("shoot")
-#		SoundPlayer.play_sound(SoundPlayer.GUNSHOT)
-#		animationPlayer.play("machinegun shoot")
-#		SoundPlayer.play_sound(SoundPlayer.MACHINEGUN)
-		animationPlayer.play("shotgun shoot")
-		SoundPlayer.play_sound(SoundPlayer.SHOTGUN)
+		animationPlayer.play(inventory.get_equipped_weapon_animation_name())
+		SoundPlayer.play_sound(inventory.get_equipped_weapon_sound())
 		var coll = rayCast.get_collider()
 		if rayCast.is_colliding() and coll.has_method("kill"):
 			coll.kill()
+			
+	if Input.is_action_just_pressed("switch_weapon"):
+		if inventory.get_equipped_weapon() == wand:
+			equip_weapon(shotwand)
+		elif inventory.get_equipped_weapon() == shotwand:
+			equip_weapon(machinewand)
+		else:
+			equip_weapon(wand)
  
 func kill():
 	get_tree().reload_current_scene()	
@@ -59,3 +79,7 @@ func get_inventory():
 	
 func add_item_to_inventory(item: Item):
 	inventory.add_item(item)
+	
+func equip_weapon(weapon: Weapon):
+	inventory.equip_weapon(weapon)
+	wandSprite.set_texture(inventory.get_equipped_weapon_texture())
