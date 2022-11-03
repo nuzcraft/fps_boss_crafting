@@ -1,0 +1,15 @@
+{
+    "enemy":{
+    },
+    "zombie":{
+        "skull": 0.5,
+        "eye": 0.5
+    },
+    "mummy":{
+        "skull": 0.1,
+        "eye": 0.9
+    },
+    "witch":{
+        "witch_hat": 1.0
+    }
+}
