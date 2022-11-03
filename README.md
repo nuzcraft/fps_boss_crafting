@@ -14,26 +14,61 @@ Theme: Likely defined by GDFG Monthly Jam #22 as I have liked submitting for tho
   - [x] zombie
   - [x] mummy
   - [x] witch
-- [ ] add unique ai to enemies
 - [x] enemies drop loot
-  - [ ] add unique loot to enemies
+  - [x] add unique loot to enemies
 - [x] player can collect loot
-- [ ] loot can be used to upgrade the gun
-  - [ ] more available guns
-  - [ ] some sort of upgrade process
 - [x] basic arena to do combat in
 - [x] sounds
-- [ ] screenshake
-
 - [x] new player sprites
 - [x] new enemy sprites
 - [x] new arena textures
 - [x] interesting arena elements (like torches/traps/pillars)
-- [ ] more sounds
+- [x] loot abstracted and icon based on attached item
+
+#### PLAYER CONTROLS
+
+- [x] 3 available wands
+  - [x] standard (pistol)
+  - [x] shotwand (shotgun)
+  - [x] machinewand (machine gun)
+- [ ] new class/object to hold wand data for player to reference
+- [ ] raycast spread for shotwand
+- [ ] raycast spread for machinewand
+- [ ] new crosshair for shotwand
+- [ ] new crosshair for machinewand
+- [ ] way to view inventory
+- [ ] crafting window
+- [ ] recipes to upgrade wands
+- [ ] ability to switch weapons
+- [ ] animation / particle when weapon hits
+
+#### ENEMY UPDATES
+
+- [ ] visible change when hit
+- [ ] new death animation
+- [ ] more health, can take more hits
+- [ ] interesting ai (for each enemy type)
+- [ ] new, themed drops (for each enemy type)
+
+#### ARENA
+
+- [ ] updated layout
+- [ ] roof
+- [ ] exit?
+
+#### JUICE
+
 - [ ] music
 - [ ] vignette on player camera
+- [ ] screenshake
+- [ ] more sounds
 
-- [x] loot abstracted and icon based on attached item
+#### GAME
+
+- [ ] ability to fight all 3 bosses
+- [ ] title screen
+- [ ] win screen
+- [ ] lose / restart screen
 
 ### Wants - Tier 1
 
