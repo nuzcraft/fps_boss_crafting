@@ -13,7 +13,7 @@ Theme: Likely defined by GDFG Monthly Jam #22 as I have liked submitting for tho
 - [ ] 3 boss enemies
   - [x] zombie
   - [x] mummy
-  - [ ] ???
+  - [x] witch
 - [ ] add unique ai to enemies
 - [x] enemies drop loot
   - [ ] add unique loot to enemies
