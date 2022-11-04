@@ -60,8 +60,10 @@ func _physics_process(delta):
 		animationPlayer.play(inventory.get_equipped_weapon_animation_name())
 		SoundPlayer.play_sound(inventory.get_equipped_weapon_sound())
 		var coll = rayCast.get_collider()
-		if rayCast.is_colliding() and coll.has_method("kill"):
-			coll.kill()
+		if rayCast.is_colliding():
+			print(coll.name)
+			if coll.has_method("kill"):
+				coll.kill()
 			
 	if Input.is_action_just_pressed("switch_weapon"):
 		if inventory.get_equipped_weapon() == wand:
