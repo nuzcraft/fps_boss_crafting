@@ -1,5 +1,7 @@
 extends KinematicBody
 class_name Player
+
+signal add_effect
  
 const MOVE_SPEED = 4
 const MOUSE_SENS = 0.5
@@ -61,7 +63,10 @@ func _physics_process(delta):
 		SoundPlayer.play_sound(inventory.get_equipped_weapon_sound())
 		var coll = rayCast.get_collider()
 		if rayCast.is_colliding():
-			print(coll.name)
+			var coll_point = rayCast.get_collision_point()
+			var coll_origin = coll.global_transform.origin
+			var effect_position = Vector3(coll_point.x, coll_point.y, coll_origin.z)
+			emit_signal("add_effect", "res://Player/Effect.tscn", effect_position)
 			if coll.has_method("kill"):
 				coll.kill()
 			

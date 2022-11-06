@@ -2,6 +2,8 @@ extends Spatial
 
 const LOOT_EJECT_VELOCITY = 8
 
+onready var player := $Player
+
 var lootManager: LootManager
 var rng = RandomNumberGenerator.new()
 
@@ -9,6 +11,7 @@ var rng = RandomNumberGenerator.new()
 func _ready():
 	lootManager = LootManager.new()
 	Events.connect("spawn_loot", self, "on_spawn_loot")
+	player.connect("add_effect", self, "on_add_effect")
 
 func on_spawn_loot(name, position):
 	var loot_array = lootManager.get_loot(name)
@@ -24,3 +27,9 @@ func loot_eject_direction():
 	var z = rng.randf_range(-1, 1)
 	var vector = Vector3(x, 1, z).normalized()
 	return vector
+	
+func on_add_effect(file_location, position):
+	var effect = load(file_location).instance()
+	effect.global_transform.origin = position
+	effect.rotation.y = lerp_angle(effect.rotation.y, atan2(player.global_transform.origin.x, player.global_transform.origin.z ), 1 )
+	add_child(effect)
