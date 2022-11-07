@@ -11,3 +11,4 @@ albedo_texture = ExtResource( 2 )
 
 [node name="Effect_GreenMagic" instance=ExtResource( 1 )]
 material_override = SubResource( 1 )
+pixel_size = 0.035

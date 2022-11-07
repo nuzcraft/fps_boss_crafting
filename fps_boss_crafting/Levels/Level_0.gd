@@ -28,8 +28,9 @@ func loot_eject_direction():
 	var vector = Vector3(x, 1, z).normalized()
 	return vector
 	
-func on_add_effect(file_location, position):
+func on_add_effect(file_location, position, rotation_y):
 	var effect = load(file_location).instance()
 	effect.global_transform.origin = position
-	effect.rotation.y = lerp_angle(effect.rotation.y, atan2(player.global_transform.origin.x, player.global_transform.origin.z ), 1 )
+#	effect.rotation.y = lerp_angle(effect.rotation.y, atan2(player.global_transform.origin.x, player.global_transform.origin.z ), 1 )
+	effect.rotation.y = rotation_y
 	add_child(effect)

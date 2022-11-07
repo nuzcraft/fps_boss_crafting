@@ -11,4 +11,5 @@ albedo_texture = ExtResource( 2 )
 
 [node name="Effect_RedX" instance=ExtResource( 1 )]
 material_override = SubResource( 1 )
+pixel_size = 0.05
 texture = ExtResource( 2 )

@@ -5,7 +5,7 @@ signal add_effect
  
 const MOVE_SPEED = 4
 const MOUSE_SENS = 0.5
-const SHOTGUN_SPREAD = 4.0
+const SHOTGUN_SPREAD = 2.5
 const MACHINEGUN_SPREAD = 2.0
  
 onready var animationPlayer := $AnimationPlayer
@@ -26,6 +26,7 @@ var rng = RandomNumberGenerator.new()
  
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	rng.randomize()
 	inventory = Inventory.new()
 	yield(get_tree(), "idle_frame")
 	get_tree().call_group("enemies", "set_player", self)
@@ -95,9 +96,11 @@ func shoot_equipped_weapon(weapon: Weapon):
 		var coll = rayCast.get_collider()
 		if rayCast.is_colliding():
 			var coll_point = rayCast.get_collision_point()
-			var coll_origin = coll.global_transform.origin
-			var effect_position = Vector3(coll_point.x, coll_point.y, coll_origin.z)
-			emit_signal("add_effect", "res://Player/Effect_Explosion_Sharp.tscn", effect_position)
+#			var coll_origin = coll.global_transform.origin
+#			var effect_position = Vector3(coll_point.x, coll_point.y, coll_origin.z)
+			var effect_position = coll_point
+			var effect_rotation_y = lerp_angle(0, atan2(global_transform.origin.x, global_transform.origin.z ), 1)
+			emit_signal("add_effect", "res://Player/Effect_Explosion_Sharp.tscn", effect_position, effect_rotation_y)
 			if coll.has_method("kill"):
 				coll.kill()
 	elif weapon == shotwand:
@@ -108,9 +111,11 @@ func shoot_equipped_weapon(weapon: Weapon):
 			var coll = ray.get_collider()
 			if ray.is_colliding():
 				var coll_point = ray.get_collision_point()
-				var coll_origin = coll.global_transform.origin
-				var effect_position = Vector3(coll_point.x, coll_point.y, coll_origin.z)
-				emit_signal("add_effect", "res://Player/Effect_GreenMagic.tscn", effect_position)
+#				var coll_origin = coll.global_transform.origin
+#				var effect_position = Vector3(coll_point.x, coll_point.y, coll_origin.z)
+				var effect_position = coll_point
+				var effect_rotation_y = lerp_angle(0, atan2(global_transform.origin.x, global_transform.origin.z ), 1)
+				emit_signal("add_effect", "res://Player/Effect_GreenMagic.tscn", effect_position, effect_rotation_y)
 				if coll.has_method("kill"):
 					coll.kill()
 	elif weapon == machinewand:
@@ -121,8 +126,10 @@ func shoot_equipped_weapon(weapon: Weapon):
 			var coll = ray.get_collider()
 			if ray.is_colliding():
 				var coll_point = ray.get_collision_point()
-				var coll_origin = coll.global_transform.origin
-				var effect_position = Vector3(coll_point.x, coll_point.y, coll_origin.z)
-				emit_signal("add_effect", "res://Player/Effect_RedX.tscn", effect_position)
+#				var coll_origin = coll.global_transform.origin
+#				var effect_position = Vector3(coll_point.x, coll_point.y, coll_origin.z)
+				var effect_position = coll_point
+				var effect_rotation_y = lerp_angle(0, atan2(global_transform.origin.x, global_transform.origin.z ), 1)
+				emit_signal("add_effect", "res://Player/Effect_RedX.tscn", effect_position, effect_rotation_y)
 				if coll.has_method("kill"):
 					coll.kill()
