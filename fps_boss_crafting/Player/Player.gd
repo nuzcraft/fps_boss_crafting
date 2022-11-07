@@ -5,9 +5,13 @@ signal add_effect
  
 const MOVE_SPEED = 4
 const MOUSE_SENS = 0.5
+const SHOTGUN_SPREAD = 4.0
+const MACHINEGUN_SPREAD = 2.0
  
 onready var animationPlayer := $AnimationPlayer
-onready var rayCast := $RayCast
+onready var rayCast := $GunRayContainer/RayCast
+onready var shotgunRayContainer := $ShotgunRayContainer
+onready var machinegunRayContainer := $MachinegunRayContainer
 onready var wandSprite := $CanvasLayer/Control/WandSprite
 
 var inventory: Inventory
@@ -17,6 +21,8 @@ var machinewand: Weapon
 
 var shootSound: int
 var shootAnimation: String
+
+var rng = RandomNumberGenerator.new()
  
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -61,14 +67,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("shoot") and !animationPlayer.is_playing():
 		animationPlayer.play(inventory.get_equipped_weapon_animation_name())
 		SoundPlayer.play_sound(inventory.get_equipped_weapon_sound())
-		var coll = rayCast.get_collider()
-		if rayCast.is_colliding():
-			var coll_point = rayCast.get_collision_point()
-			var coll_origin = coll.global_transform.origin
-			var effect_position = Vector3(coll_point.x, coll_point.y, coll_origin.z)
-			emit_signal("add_effect", "res://Player/Effect.tscn", effect_position)
-			if coll.has_method("kill"):
-				coll.kill()
+		shoot_equipped_weapon(inventory.get_equipped_weapon())
 			
 	if Input.is_action_just_pressed("switch_weapon"):
 		if inventory.get_equipped_weapon() == wand:
@@ -90,3 +89,40 @@ func add_item_to_inventory(item: Item):
 func equip_weapon(weapon: Weapon):
 	inventory.equip_weapon(weapon)
 	wandSprite.set_texture(inventory.get_equipped_weapon_texture())
+	
+func shoot_equipped_weapon(weapon: Weapon):
+	if weapon == wand:
+		var coll = rayCast.get_collider()
+		if rayCast.is_colliding():
+			var coll_point = rayCast.get_collision_point()
+			var coll_origin = coll.global_transform.origin
+			var effect_position = Vector3(coll_point.x, coll_point.y, coll_origin.z)
+			emit_signal("add_effect", "res://Player/Effect_Explosion_Sharp.tscn", effect_position)
+			if coll.has_method("kill"):
+				coll.kill()
+	elif weapon == shotwand:
+		for ray in shotgunRayContainer.get_children():
+			rng.randomize()
+			ray.cast_to.x = rng.randf_range(SHOTGUN_SPREAD, -SHOTGUN_SPREAD)
+			ray.cast_to.y = rng.randf_range(SHOTGUN_SPREAD, -SHOTGUN_SPREAD)
+			var coll = ray.get_collider()
+			if ray.is_colliding():
+				var coll_point = ray.get_collision_point()
+				var coll_origin = coll.global_transform.origin
+				var effect_position = Vector3(coll_point.x, coll_point.y, coll_origin.z)
+				emit_signal("add_effect", "res://Player/Effect_GreenMagic.tscn", effect_position)
+				if coll.has_method("kill"):
+					coll.kill()
+	elif weapon == machinewand:
+		for ray in machinegunRayContainer.get_children():
+			rng.randomize()
+			ray.cast_to.x = rng.randf_range(MACHINEGUN_SPREAD, -MACHINEGUN_SPREAD)
+			ray.cast_to.y = rng.randf_range(MACHINEGUN_SPREAD, -MACHINEGUN_SPREAD)
+			var coll = ray.get_collider()
+			if ray.is_colliding():
+				var coll_point = ray.get_collision_point()
+				var coll_origin = coll.global_transform.origin
+				var effect_position = Vector3(coll_point.x, coll_point.y, coll_origin.z)
+				emit_signal("add_effect", "res://Player/Effect_RedX.tscn", effect_position)
+				if coll.has_method("kill"):
+					coll.kill()

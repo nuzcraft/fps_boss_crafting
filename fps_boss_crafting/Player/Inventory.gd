@@ -4,7 +4,6 @@ var items = []
 var weapons = []
 
 func _init():
-	print("Inventory initialized")
 	pass
 
 func add_item(item: Item):
