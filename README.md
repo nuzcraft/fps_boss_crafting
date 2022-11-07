@@ -32,15 +32,15 @@ Theme: Likely defined by GDFG Monthly Jam #22 as I have liked submitting for tho
   - [x] shotwand (shotgun)
   - [x] machinewand (machine gun)
 - [x] new class/object to hold wand data for player to reference
-- [ ] raycast spread for shotwand
-- [ ] raycast spread for machinewand
+- [x] raycast spread for shotwand
+- [x] raycast spread for machinewand
 - [ ] new crosshair for shotwand
 - [ ] new crosshair for machinewand
 - [ ] way to view inventory
 - [ ] crafting window
 - [ ] recipes to upgrade wands
 - [x] ability to switch weapons
-- [ ] animation / particle when weapon hits
+- [x] animation / particle when weapon hits
 
 #### ENEMY UPDATES
 
