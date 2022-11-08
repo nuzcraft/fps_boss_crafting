@@ -52,7 +52,7 @@ _global_script_class_icons={
 
 config/name="Fps Boss Crafting"
 run/main_scene="res://Levels/Level_0.tscn"
-config/icon="res://icon.png"
+config/icon="res://Screenshot 2022-11-08 123125.png"
 
 [autoload]
 
